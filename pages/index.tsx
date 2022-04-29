@@ -26,7 +26,7 @@ function Project({ name, idx }: IProjectProps) {
 
   return (
     <Link href={`/projects/${name}`}>
-      <div className="relative flex h-40 w-200 cursor-pointer flex-col items-center justify-center border-2 border-gray-200 hover:border-pink-500 transition-colors duration-500 overflow-hidden">
+      <div className="relative flex h-60 w-200 cursor-pointer flex-col items-center justify-center border-2 border-gray-200 hover:border-pink-500 transition-colors duration-500 overflow-hidden">
         <h2 className="flex-1 flex justify-center items-center absolute w-full h-full opacity-0 text-white hover:bg-pink-500 hover:opacity-100 transition-all duration-500 z-30">
           {title}
         </h2>

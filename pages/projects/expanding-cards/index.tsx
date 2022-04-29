@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../../../components/Layout'
-import { ExpandingCards } from './ExpandingCards'
+import { ExpandingCards } from '../../../components/ExpandingCards'
 
 const imgs = [
   {

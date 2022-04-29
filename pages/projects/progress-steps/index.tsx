@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Layout from '../../../components/Layout'
 import ExpandingCards from '../expanding-cards'
-import { ProgressSteps } from './ProgressSteps'
+import { ProgressSteps } from '../../../components/ProgressSteps'
 
 export default function Index() {
   const steps = 4
