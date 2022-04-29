@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply py-1 px-5 m-2 text-pink-100 transition-colors duration-150 bg-pink-500 rounded-md hover:bg-pink-400;
+  }
+  .btn-primary[disabled] {
+    @apply py-1 px-5 m-2 text-gray-400 transition-colors duration-150 bg-gray-200 rounded-md;
+  }
+}
