@@ -17,24 +17,22 @@ export default function Index() {
 
   return (
     <Layout title="Progress Steps">
-      <div className="flex flex-1 w-full h-full flex-col items-center justify-center">
-        <ProgressSteps steps={steps} current={current} />
-        <div className="flex gap-2 mt-5">
-          <button
-            className="btn-primary"
-            disabled={current === 0}
-            onClick={handlePrev}
-          >
-            prev
-          </button>
-          <button
-            className="btn-primary"
-            disabled={current === 4}
-            onClick={handleNext}
-          >
-            next
-          </button>
-        </div>
+      <ProgressSteps steps={steps} current={current} />
+      <div className="flex gap-2 mt-5">
+        <button
+          className="btn-primary"
+          disabled={current === 0}
+          onClick={handlePrev}
+        >
+          prev
+        </button>
+        <button
+          className="btn-primary"
+          disabled={current === 4}
+          onClick={handleNext}
+        >
+          next
+        </button>
       </div>
     </Layout>
   )

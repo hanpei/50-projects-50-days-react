@@ -27,10 +27,8 @@ const imgs = [
 
 export default function Index() {
   return (
-    <Layout title="Expanding Cards">
-      <div className="flex flex-1 w-full h-full flex-col items-center justify-center">
-        <ExpandingCards data={imgs} />
-      </div>
+    <Layout title="Expanding Cards" className="p-10">
+      <ExpandingCards data={imgs} />
     </Layout>
   )
 }

@@ -1,20 +1,21 @@
 import Link from 'next/link'
+import { useEffect } from 'react'
 
 export default function Layout({
   title,
   children,
+  className,
 }: {
   children: React.ReactNode
   title: string
+  className: string
 }) {
-  return (
-    <div className="flex min-h-screen flex-col items-center justify-start">
-      <Navbar title={title} />
-      <main className="flex flex-1 h-full w-full flex-col items-center justify-start p-20 pt-10">
-        {children}
-      </main>
-    </div>
-  )
+  useEffect(() => {
+    document.title = title
+  })
+
+  const cls = `flex min-h-screen flex-col items-center justify-center ${className}`
+  return <div className={cls}>{children}</div>
 }
 
 function Navbar({ title }: any) {
