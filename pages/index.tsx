@@ -6,10 +6,11 @@ const Home: NextPage = () => {
   return (
     <div className="min-h-screen py-2">
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-3xl font-bold py-10">50 PROJECTS 50 DAYS</h1>
-        <div className="grid grid-cols-4 gap-4 w-full">
+        <h1 className="py-10 text-3xl font-bold">50 PROJECTS 50 DAYS</h1>
+        <div className="grid w-full grid-cols-4 gap-4">
           <Project name="expanding-cards" idx={1}></Project>
           <Project name="progress-steps" idx={2}></Project>
+          <Project name="rotating-nav" idx={3}></Project>
         </div>
       </main>
     </div>
@@ -26,16 +27,16 @@ function Project({ name, idx }: IProjectProps) {
 
   return (
     <Link href={`/projects/${name}`}>
-      <div className="relative flex h-60 w-200 cursor-pointer flex-col items-center justify-center border-2 border-gray-200 hover:border-pink-500 transition-colors duration-500 overflow-hidden">
-        <h2 className="flex-1 flex justify-center items-center absolute w-full h-full opacity-0 text-white hover:bg-pink-500 hover:opacity-100 transition-all duration-500 z-30">
+      <div className="w-200 relative flex h-60 cursor-pointer flex-col items-center justify-center overflow-hidden border-2 border-gray-200 transition-colors duration-500 hover:border-pink-500">
+        <h2 className="absolute z-30 flex h-full w-full flex-1 items-center justify-center text-white opacity-0 transition-all duration-500 hover:bg-pink-500 hover:opacity-100">
           {title}
         </h2>
         <img
           src={`img/${name}.jpg`}
           alt=""
-          className="absolute z-10 object-cover w-[400px] h-[320px]"
+          className="absolute z-10 h-[320px] w-[400px] object-contain"
         />
-        <span className="absolute top-0 right-0 bg-pink-500 px-2 pb-1 z-50 text-white">
+        <span className="absolute top-0 right-0 z-50 bg-pink-500 px-2 pb-1 text-white">
           Day {idx}
         </span>
       </div>
