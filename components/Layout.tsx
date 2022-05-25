@@ -8,7 +8,7 @@ export default function Layout({
 }: {
   children: React.ReactNode
   title: string
-  className: string
+  className?: string
 }) {
   useEffect(() => {
     document.title = title
@@ -22,7 +22,7 @@ function Navbar({ title }: any) {
   return (
     <div className="flex w-full flex-row p-2 px-4">
       <Link passHref href="/">
-        <a className=" text-pink-500 text-left">{'Home'}</a>
+        <a className=" text-left text-pink-500">{'Home'}</a>
       </Link>
       <h1 className="pl-4 font-bold">{title}</h1>
     </div>
