@@ -1,16 +1,20 @@
 import type { NextPage } from 'next'
-
+import Head from 'next/head'
 import Link from 'next/link'
 
 const Home: NextPage = () => {
   return (
     <div className="min-h-screen py-2">
+      <Head>
+        <title>50 Projects Demo</title>
+      </Head>
       <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
         <h1 className="py-10 text-3xl font-bold">50 PROJECTS 50 DAYS</h1>
         <div className="grid w-full grid-cols-4 gap-4">
           <Project name="expanding-cards" idx={1}></Project>
           <Project name="progress-steps" idx={2}></Project>
           <Project name="rotating-nav" idx={3}></Project>
+          <Project name="hidden-search" idx={4}></Project>
         </div>
       </main>
     </div>
