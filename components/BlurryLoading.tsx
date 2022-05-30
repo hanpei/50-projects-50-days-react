@@ -72,7 +72,7 @@ export function BlurryLoading({
         drawImg(canvas, thumbnail, blur)
       }
     }
-  }, [loadedThumb])
+  }, [loadedThumb, blur])
 
   useEffect(() => {
     const image = imageRef.current
@@ -102,7 +102,6 @@ export function BlurryLoading({
           className="absolute top-0 left-0 h-full w-full object-cover"
           ref={canvasRef}
         ></canvas>
-
         <img
           src={imgSrc}
           alt=""

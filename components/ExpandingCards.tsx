@@ -9,7 +9,7 @@ export function ExpandingCards({ data }: IExpandingCardsProps) {
   const toggle = (i: number) => setCurrentIdx(i)
 
   return (
-    <div className="flex flex-1 w-full h-full flex-row gap-2 ">
+    <div className="flex h-full w-full flex-1 flex-row gap-2 ">
       {data.map((item, index) => {
         return (
           <Card
@@ -40,12 +40,13 @@ function Card({ src, title, expanded, onClick }: ICardProps) {
   return (
     <div
       onClick={onClick}
-      className={`${flexValue}  transition-flex relative cursor-pointer overflow-hidden rounded-lg duration-500 ease-in-out bg-gray-100`}
+      className={`${flexValue}  transition-flex relative cursor-pointer overflow-hidden rounded-lg bg-gray-100 duration-500 ease-in-out`}
     >
       <img
         src={src}
         className="absolute z-10 h-full w-full select-none object-cover "
         draggable="false"
+        alt={title}
       />
       {title && (
         <h3
