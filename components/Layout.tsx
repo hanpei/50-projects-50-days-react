@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 export default function Layout({
   title,
   children,
-  className,
+  className = '',
 }: {
   children: React.ReactNode
   title: string
